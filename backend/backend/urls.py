@@ -1,5 +1,5 @@
 """
-URL configuration for config project.
+URL configuration for backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -22,8 +22,8 @@ from blog import views as blog_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', blog_views.home, name='home'), # Homepage at root
-    path('blog/', include('blog.urls')), # Blog under /blog/
+    path('', blog_views.home, name='home'),  # Homepage at root
+    path('blog/', include('blog.urls')),      # Blog routes under /blog/
 ]
 
 # Serve media and static files during development only
